@@ -262,6 +262,12 @@ export class PublicKey {
       return verifier.call(this, sum, signature)
     }
 
+    // if the PublicKey is an RSA public key, then we need to modify the
+    // digest algorithm
+    if (this.algo === "rsaEncryption") {
+      hashAlgorithm = "RSA-" + hashAlgorithm;
+    }
+
     const verify = createVerify(hashAlgorithm)
     verify.update(data)
     return verify.verify(this.toPEM(), signature)
