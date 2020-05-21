@@ -265,7 +265,7 @@ export class PublicKey {
     // if the PublicKey is an RSA public key, then we need to modify the
     // digest algorithm
     if (this.algo === "rsaEncryption") {
-      hashAlgorithm = "RSA-" + hashAlgorithm;
+      hashAlgorithm = "RSA-" + hashAlgorithm.toUpperCase();
     }
 
     const verify = createVerify(hashAlgorithm)
