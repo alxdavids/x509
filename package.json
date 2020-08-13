@@ -5,13 +5,13 @@
     "Yan Qing <admin@zensh.com>",
     "Alex Davidson <coela@alxdavids.xyz>"
   ],
-  "version": "1.2.1",
+  "version": "0.0.1",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:fidm/x509.git"
+    "url": "git@github.com:alxdavids/x509.git"
   },
   "homepage": "https://github.com/alxdavids/x509",
   "engines": {
